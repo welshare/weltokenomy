@@ -29,7 +29,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 */
 
 /// @custom:security-contact stefan@welshare.health
-contract WelToken is ERC20, ERC20Permit, Ownable {
+contract WelshareHealthToken is ERC20, ERC20Permit, Ownable {
     uint256 public constant WEL_SUPPLY = 2_500_000_000 ether;
     constructor(address treasury) ERC20("Welshare Health Token", "WEL") ERC20Permit("Welshare Health Token") Ownable(treasury)  {
         _mint(treasury, WEL_SUPPLY);

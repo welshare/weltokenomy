@@ -2,7 +2,7 @@
 pragma solidity ^0.8.25;
 
 import {Script, console} from "forge-std/Script.sol";
-import {WelToken} from "../src/WelToken.sol";
+import {WelshareHealthToken} from "../src/WelshareHealthToken.sol";
 
 contract DeployWelToken is Script {
     
@@ -10,7 +10,7 @@ contract DeployWelToken is Script {
 
     function run() public {
         vm.broadcast();
-        WelToken token = new WelToken(sepoliaMultisig);
+        WelshareHealthToken token = new WelshareHealthToken(sepoliaMultisig);
         console.log("WEL_TOKEN=", address(token));
     }
 }
