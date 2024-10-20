@@ -30,8 +30,10 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
 /// @custom:security-contact stefan@welshare.health
 contract WelToken is ERC20, ERC20Permit {
-    constructor() ERC20("WelToken", "WEL") ERC20Permit("WelToken") {
-        _mint(msg.sender, 1000000 * 10 ** decimals());
+
+    uint256 public constant WEL_SUPPLY = 2_500_000_000 ether;
+    constructor(address treasury) ERC20("WelToken", "WEL") ERC20Permit("WelToken")  {
+        _mint(treasury, WEL_SUPPLY);
     }
 }
 
