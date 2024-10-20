@@ -16,7 +16,7 @@ contract WelTokenTest is Test {
     function test_initialize() public {
         vm.startPrank(deployer);
         WelToken token = new WelToken(treasury);
-        assertEq(token.name(), "WelToken");
+        assertEq(token.name(), "Welshare Health Token");
         assertEq(token.totalSupply(), 2_500_000_000 ether);
         assertEq(token.balanceOf(treasury), 2_500_000_000 ether);
 
